@@ -2,6 +2,7 @@ cache:
 	mkdir -p cache
 	wget http://www.emacswiki.org/cgi-bin/wiki?action=elisp -O cache/emacswiki.html
 	wget https://raw.github.com/dimitri/el-get/master/el-get-install.el -O cache/el-get-install.el
+	cd cache && git clone http://github.com/dimitri/el-get.git
 
 all:
 	env HOME=`pwd` `which emacs` --daemon=ghost
