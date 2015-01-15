@@ -19,3 +19,11 @@
     (concat "file://" (getenv "HOME") "/cache/el-get-install.el")))
   (end-of-buffer)
   (eval-print-last-sexp))
+
+(setq el-get-recipe-path nil)
+(add-to-list 'el-get-recipe-path (concat (getenv "HOME") "/cache/elparcp"))
+(add-to-list 'el-get-recipe-path (concat (getenv "HOME") "/cache/eabrecipes"))
+
+(if (not (el-get-package-installed-p 'eab-misc))
+    (el-get 'sync '(eab-misc)))
+
