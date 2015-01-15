@@ -3,4 +3,7 @@
 !README.md
 !LICENSE
 !Makefile
-!.emacs.d/
+!/.emacs.d/
+!/.emacs.d/lisp/
+!.emacs.d/init.el
+!.emacs.d/lisp/bootstrap.el
