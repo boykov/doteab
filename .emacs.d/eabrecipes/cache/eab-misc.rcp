@@ -1,0 +1,4 @@
+(:name eab-misc
+       :description "collection of emacs lisp packages useful for me"
+       :type git
+       :url "/home/eab/git/dotemacs/el-get/eab-misc")

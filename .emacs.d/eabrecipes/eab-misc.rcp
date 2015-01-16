@@ -1,0 +1,4 @@
+(:name eab-misc
+       :description "collection of emacs lisp packages useful for me"
+       :type github
+       :pkgname "boykov/eab-misc")
