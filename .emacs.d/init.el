@@ -7,12 +7,15 @@
 ;; Requirements: 
 ;; Status: not intended to be distributed yet
 
+;; Load bootstrap.el
 (load (concat user-emacs-directory "lisp/bootstrap.el"))
 
+;; Add eab-misc
+(if (not (el-get-package-installed-p 'eab-misc))
+    (el-get 'sync '(eab-misc)))
+
 ;; Load dotemacs.el
-(setq dotfiles-dir user-emacs-directory)
-(setq dotemacs-children-prefix dotfiles-dir)
-(load (concat dotfiles-dir "el-get/eab-misc/dotemacs.el"))
+(load (concat user-emacs-directory "el-get/eab-misc/dotemacs.el"))
 
 (setq dotemacs-loaded-ok nil)
 
