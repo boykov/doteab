@@ -7,6 +7,15 @@
 ;; Requirements: 
 ;; Status: not intended to be distributed yet
 
+(setq dotemacs-loaded-ok nil)
+
+(defun eab/loaded-ok ()
+  (if dotemacs-loaded-ok
+      (kill-emacs)
+    (progn
+      (shell-command "echo > $HOME/dotemacs.error")
+      (kill-emacs))))
+
 ;; Load bootstrap.el
 (load (concat user-emacs-directory "lisp/bootstrap.el"))
 
@@ -16,7 +25,3 @@
 
 ;; Load dotemacs.el
 (load (concat user-emacs-directory "el-get/eab-misc/dotemacs.el"))
-
-(setq dotemacs-loaded-ok nil)
-
-(if dotemacs-loaded-ok (kill-emacs))

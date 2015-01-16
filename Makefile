@@ -6,4 +6,5 @@ cache:
 
 all:
 	env HOME=`pwd` `which emacs` --daemon=ghost
-	env HOME=`pwd` gnome-terminal -e "emacsclient -t -s ghost"
+	env HOME=`pwd` gnome-terminal -e "emacsclient -t -s ghost --eval \"(eab/loaded-ok)\""
+	@if (test -e ./dotemacs.error); then rm ./dotemacs.error; echo "ERROR! dotemacs did not loaded correctly"; return 1; else echo "dotemacs loaded ok"; fi
