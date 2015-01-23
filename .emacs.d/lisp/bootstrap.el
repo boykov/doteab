@@ -17,6 +17,15 @@
 (setq eab/eabrecipes-path (concat user-emacs-directory "eabrecipes/cache"))
 (setq dotemacs-children-prefix user-emacs-directory)
 
+
+(setq dotemacs-loaded-ok nil)
+(defun eab/loaded-ok ()
+  (if dotemacs-loaded-ok
+      (kill-emacs)
+    (progn
+      (shell-command "echo > $HOME/dotemacs.error")
+      (kill-emacs))))
+
 (add-to-list 'load-path (concat user-emacs-directory "el-get/el-get"))
 (unless (require 'el-get nil t)
   (setq el-get-install-branch "master")
@@ -40,6 +49,9 @@
 	 "elpa")))
       package-directory-list
       (list (file-name-as-directory package-user-dir)))
+;; Add eab-misc
+(if (not (el-get-package-installed-p 'eab-misc))
+    (el-get 'sync '(eab-misc)))
 
 (if (not (file-exists-p eab/elparcp-path))
     (progn
