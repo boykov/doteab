@@ -5,9 +5,9 @@
 !Makefile
 !/.emacs.d/
 !/.emacs.d/lisp/
+!/.emacs.d/lisp/*
 !.emacs.d/init.el
-!.emacs.d/lisp/bootstrap.el
 !/.emacs.d/eabrecipes/
 !/.emacs.d/eabrecipes/cache
-!/.emacs.d/eabrecipes/eab-misc.rcp
-!/.emacs.d/eabrecipes/cache/eab-misc.rcp
+!/.emacs.d/eabrecipes/*
+!/.emacs.d/eabrecipes/cache/*
