@@ -35,32 +35,22 @@
   (end-of-buffer)
   (eval-print-last-sexp))
 
-(setq package-archives
-      '(("melpa" . "http://melpa.milkbox.net/packages/")
-	("elpa" . "http://tromey.com/elpa/")
-	("gnu" . "http://elpa.gnu.org/packages/")))
+;; elpa recipes and eabrecipes only
+(setq el-get-recipe-path nil)
+(add-to-list 'el-get-recipe-path eab/eabrecipes-path)
 
-(setq package-user-dir
-      (expand-file-name
-       (convert-standard-filename
-	(concat
-	 (file-name-as-directory
-	  (el-get-package-directory "package"))
-	 "elpa")))
-      package-directory-list
-      (list (file-name-as-directory package-user-dir)))
 ;; Add eab-misc
 (if (not (el-get-package-installed-p 'eab-misc))
     (el-get 'sync '(eab-misc)))
 
+;; Add package.rcp from eabrecipes (before elparcp!)
+(el-get 'sync '(package))
+
+;; Create elparcp: package-archives loaded from package.rcp
 (if (not (file-exists-p eab/elparcp-path))
     (progn
       (make-directory eab/elparcp-path)
       (el-get-elpa-build-local-recipes eab/elparcp-path)))
 
-;; elpa recipes and eabrecipes only
-(setq el-get-recipe-path nil)
+;; Add elparcp
 (add-to-list 'el-get-recipe-path eab/elparcp-path)
-(add-to-list 'el-get-recipe-path eab/eabrecipes-path)
-
-
