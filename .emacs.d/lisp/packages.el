@@ -2,5 +2,28 @@
       '(
 	eab-misc
 	eab-dotemacs
+	cl-lib
+
+	workgroups2
+	magit
+	git-commit-mode
+	git-rebase-mode
+	magit-annex
+	org-magit
+	auctex
+	org-agenda-property
+	region-bindings-mode
+	smex
+	smartparens
+	auto-install
+	projectile
+	flx-ido
+	ido-at-point
+	paredit
+	grep-a-lot
 	wgrep
+	undo-tree
+	workgroups
+	edit-list
+	yasnippet
 	))

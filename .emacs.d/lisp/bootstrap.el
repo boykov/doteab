@@ -46,6 +46,10 @@
 ;; Add package.rcp from eabrecipes (before elparcp!)
 (el-get 'sync '(package))
 
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
+
+(setq package-archives `(("myelpa" . ,(concat eab/homedir-cache "/elpamirror/"))))
+
 ;; Create elparcp: package-archives loaded from package.rcp
 (if (not (file-exists-p eab/elparcp-path))
     (progn
