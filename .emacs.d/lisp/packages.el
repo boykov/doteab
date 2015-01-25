@@ -5,8 +5,15 @@
 	cl-lib
 	ace-jump-mode
 
+	moz
+	expand-region
+	multiple-cursors
+	flx-isearch
 	workgroups2
+	dictionary
+	sauron
 	magit
+	;; magit-filenotify ;; needs emacs 24.4 with file-notify-support
 	git-commit-mode
 	git-rebase-mode
 	magit-annex
