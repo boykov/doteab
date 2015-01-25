@@ -7,6 +7,7 @@ cache:
 	cd cache && git clone https://github.com/boykov/eab-dotemacs.git
 	cd cache && wget http://dl.getdropbox.com/u/1897885/eabelpamirror.tar.gz
 	cd cache && tar -xvzf eabelpamirror.tar.gz
+	cd cache && git clone https://github.com/boykov/ace-jump-mode.git
 
 all:
 	env HOME=`pwd` `which emacs` --daemon=ghost

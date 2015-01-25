@@ -3,6 +3,7 @@
 	eab-misc
 	eab-dotemacs
 	cl-lib
+	ace-jump-mode
 
 	workgroups2
 	magit
