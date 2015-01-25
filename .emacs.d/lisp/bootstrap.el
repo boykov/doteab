@@ -58,4 +58,6 @@
       (el-get-elpa-build-local-recipes eab/elparcp-path)))
 
 ;; Add elparcp
+(setq el-get-recipe-path nil)
 (add-to-list 'el-get-recipe-path eab/elparcp-path)
+(add-to-list 'el-get-recipe-path eab/eabrecipes-path)
