@@ -44,7 +44,8 @@
     (el-get 'sync '(eab-misc)))
 
 ;; Add package.rcp from eabrecipes (before elparcp!)
-(el-get 'sync '(package))
+(if (not (el-get-package-installed-p 'package))
+    (el-get 'sync '(package)))
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
 
