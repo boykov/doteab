@@ -30,15 +30,14 @@
 (setq el-get-recipe-path nil)
 (add-to-list 'el-get-recipe-path eab/eabrecipes-path)
 
-;; Add eab-misc
-(if (not (el-get-package-installed-p 'eab-misc))
-    (el-get 'sync '(eab-misc)))
-
 ;; Fix bug auctex-11.87.7 with .loaddefs.el: can't load tex-site (needs relative path)
 (add-to-list 'load-path (concat user-emacs-directory "el-get/auctex"))
 
 ;; Add package.rcp from eabrecipes (before elparcp!)
-(el-get 'sync '(package))
+;; Add eab-misc
+(el-get 'sync '(eab-misc
+		package
+		eab-dotemacs))
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") 'append)
 
