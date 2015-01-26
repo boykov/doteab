@@ -4,6 +4,7 @@
 	eab-dotemacs
 	cl-lib
 	ace-jump-mode
+	ergoemacs-keybindings
 
 	moz
 	expand-region

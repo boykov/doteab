@@ -1,0 +1,3 @@
+(:name ergoemacs-keybindings
+       :type git
+       :url "../../cache/ergoemacs-keybindings")

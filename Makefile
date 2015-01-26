@@ -6,6 +6,7 @@ cache:
 	cd cache && git clone https://github.com/boykov/eab-misc.git
 	cd cache && git clone https://github.com/boykov/eab-dotemacs.git
 	cd cache && git clone https://github.com/boykov/ace-jump-mode.git
+	cd cache && git svn clone http://ergoemacs.googlecode.com/svn/trunk/ergoemacs/ergoemacs-keybindings
 	cd cache && ln -s /home/eab/newemacs/elpamirror
 	# cd cache && wget http://dl.getdropbox.com/u/1897885/eabelpamirror.tar.gz
 	# cd cache && tar -xvzf eabelpamirror.tar.gz
