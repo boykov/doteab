@@ -1,4 +1,4 @@
-(setq eab/el-get-sources
+(el-get 'sync
       '(
 	eab-misc
 	eab-dotemacs

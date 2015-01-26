@@ -15,7 +15,5 @@
 
 (dotemacs-load-children '("lisp/packages"))
 
-(el-get 'sync eab/el-get-sources)
-
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-kbd"))
 
