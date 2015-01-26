@@ -1,4 +1,4 @@
 (:name eab-misc
        :description "collection of emacs lisp packages useful for me"
        :type git
-       :url "../../cache/eab-misc")
+       :url "../../cache/el-getmirror/eab-misc")

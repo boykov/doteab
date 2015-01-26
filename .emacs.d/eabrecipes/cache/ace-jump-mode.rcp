@@ -2,4 +2,4 @@
        :website "https://github.com/winterTTr/ace-jump-mode/wiki"
        :description "A quick cursor location minor mode for emacs"
        :type git
-       :url "../../cache/ace-jump-mode")
+       :url "../../cache/el-getmirror/ace-jump-mode")
