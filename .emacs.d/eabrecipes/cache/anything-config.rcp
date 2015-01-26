@@ -1,6 +1,0 @@
-(:name anything-config
-:auto-generated t
-:type http
-:url "file:///home/eab/git/dotemacs/el-get/anything-config/anything-config.el"
-:description "Applications libary for `anything.el'"
-)
