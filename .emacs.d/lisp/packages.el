@@ -5,6 +5,10 @@
 	cl-lib
 	ace-jump-mode
 	ergoemacs-keybindings
+	anything-match-plugin
+	anything-config
+	anything
+	org-mode
 
 	moz
 	expand-region
