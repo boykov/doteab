@@ -18,5 +18,9 @@ all:
 	env HOME=`pwd` emacsclient -t -s ghost --eval "(eab/loaded-ok)"
 	@if (test -e ./dotemacs.error); then rm ./dotemacs.error; echo "ERROR! dotemacs did not loaded correctly"; return 1; else echo "dotemacs loaded ok"; fi
 
+gnome:
+	env HOME=`pwd` `which emacs` --daemon=ghost
+	gnome-terminal . --command "env HOME=`pwd` emacsclient -t -s ghost"
+
 clear:
 	cd .emacs.d && rm -rf el-get/
