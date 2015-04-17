@@ -1,9 +1,10 @@
 cache:
 	mkdir -p cache
 	cd cache && ln -s /home/eab/.emacs.d/el-get el-getmirror
+	cd cache && ln -s /home/eab/newemacs/emacswiki.html emacswiki.html
 	# mkdir -p cache/el-getmirror
 	# wget http://www.emacswiki.org/cgi-bin/wiki?action=elisp -O cache/emacswiki.html
-	# wget https://raw.github.com/dimitri/el-get/master/el-get-install.el -O cache/el-get-install.el
+	wget https://raw.github.com/dimitri/el-get/master/el-get-install.el -O cache/el-get-install.el
 	# cd cache/el-getmirror && git clone http://github.com/dimitri/el-get.git
 	# cd cache/el-getmirror && git clone https://github.com/boykov/eab-misc.git
 	# cd cache/el-getmirror && git clone https://github.com/boykov/eab-dotemacs.git

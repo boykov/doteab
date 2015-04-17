@@ -14,6 +14,15 @@
 (load (concat user-emacs-directory "el-get/eab-misc/dotemacs.el"))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-packages-minimal"))
+
+(package-refresh-contents)
+(package-initialize)
+
+(eab/sync-package '(ace-window))
+
+(if (featurep 'ace-jump-mode)
+    (unload-feature 'ace-jump-mode 't))
+
 (dotemacs-load-children '("lisp/packages"))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-kbd"))

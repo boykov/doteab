@@ -12,7 +12,7 @@
 (setq eab/el-get-install-path (concat "file://" eab/homedir-cache "/el-get-install.el"))
 ;; TODO this cached url doesn't work: failed to retrieve
 (setq el-get-emacswiki-elisp-file-list-url (concat "file://" eab/homedir-cache "/emacswiki.html"))
-(setq el-get-git-install-url (concat eab/homedir-cache "/el-get"))
+(setq el-get-git-install-url (concat eab/homedir-cache "/el-getmirror/el-get"))
 (setq eab/elparcp-path (concat (getenv "HOME") "/cache/elparcp"))
 (setq eab/eabrecipes-path (concat user-emacs-directory "eabrecipes/cache"))
 (setq dotemacs-children-prefix user-emacs-directory)
@@ -61,3 +61,12 @@
       (shell-command "echo > $HOME/dotemacs.error")
       (kill-emacs))))
 (setq dotemacs-loaded-ok nil)
+
+(defun eab/sync-package (package-sources)
+  "DOCSTRING"
+  (interactive)
+  (mapcar (lambda (p)
+	     (unless (package-installed-p p)
+	       (package-install p)))
+	  package-sources))
+

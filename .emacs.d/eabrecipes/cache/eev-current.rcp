@@ -1,0 +1,6 @@
+(:name eev-current
+       :description "Eev is a package that adds suport for e-scripts in Emacs"
+       :type http-tar
+       :options ("xzf")
+       :url "http://angg.twu.net/eev-current.tar.gz"
+       )
