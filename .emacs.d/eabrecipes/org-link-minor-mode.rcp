@@ -1,0 +1,6 @@
+(:name org-link-minor-mode
+       :website "https://github.com/seanohalpin/org-link-minor-mode"
+       :description "Enables org-mode style fontification and activation of bracket links."
+       :type github
+       :pkgname "seanohalpin/org-link-minor-mode"
+       )

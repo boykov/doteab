@@ -1,0 +1,5 @@
+(:name idle-highlight-mode
+       :description "Idle Highlight Mode."
+       :website "https://github.com/nonsequitur/idle-highlight-mode"
+       :type github
+       :url "../../cache/el-getmirror/idle-highlight-mode")
