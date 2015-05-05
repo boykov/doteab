@@ -99,6 +99,8 @@
 ;; ;; TODO manual comment problem packages
 ;; (el-get 'sync (append
 ;; 	       eab/package-sources-extra
+;; 	       ))
 
-;; 	       ;; eab/el-get-sources-minimal
+;; (el-get 'sync (append
+;; 	       eab/el-get-sources-extra
 ;; 	       ))
