@@ -93,3 +93,12 @@
 (setq eab/eegchannel-path (expand-file-name (concat user-emacs-directory "el-get/eev-current/eegchannel")))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-eepitch"))
+
+(dotemacs-load-children '("el-get/eab-dotemacs/eab-packages"))
+
+;; ;; TODO manual comment problem packages
+;; (el-get 'sync (append
+;; 	       eab/package-sources-extra
+
+;; 	       ;; eab/el-get-sources-minimal
+;; 	       ))

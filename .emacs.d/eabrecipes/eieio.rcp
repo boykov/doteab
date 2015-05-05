@@ -1,0 +1,4 @@
+(:name eieio
+:type builtin
+:description "Enhanced Implementation of Emacs Interpreted Objects"
+)
