@@ -104,3 +104,4 @@
 ;; (el-get 'sync (append
 ;; 	       eab/el-get-sources-extra
 ;; 	       ))
+;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-depend"))
