@@ -18,10 +18,10 @@
 (package-refresh-contents)
 (package-initialize)
 
-(eab/sync-package '(ace-window))
+;; (eab/sync-package '(ace-window))
 
-(if (featurep 'ace-jump-mode)
-    (unload-feature 'ace-jump-mode 't))
+;; (if (featurep 'ace-jump-mode)
+;;     (unload-feature 'ace-jump-mode 't))
 
 (dotemacs-load-children '("lisp/packages"))
 
@@ -87,7 +87,7 @@
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-auto-complete"))
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-ui"))
 
-(dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-ace"))
+;; (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-ace"))
 
 (setq eab/eeansi-path "/home/eab/git/auto/eeansi.sh")
 (setq eab/eegchannel-path (expand-file-name (concat user-emacs-directory "el-get/eev-current/eegchannel")))
