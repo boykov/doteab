@@ -104,4 +104,10 @@
 ;; (el-get 'sync (append
 ;; 	       eab/el-get-sources-extra
 ;; 	       ))
+
+;; ;; TODO void eab/onhost
+;; ;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-path"))
 ;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-depend"))
+;; (dotemacs-load-children '("/home/eab/git/dotemacs/lisp/eab-gnus"))
+;; (dotemacs-load-children '("/home/eab/git/dotemacs/lisp/eab-twit"))
+;; ;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-postload"))
