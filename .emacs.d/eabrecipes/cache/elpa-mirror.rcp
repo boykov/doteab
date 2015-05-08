@@ -1,5 +1,0 @@
-(:name elpa-mirror
-       :website "https://github.com/redguardtoo/elpa-mirror"
-       :description "cheap and easy way to build elpa mirror for emacs"
-       :type github
-       :pkgname "redguardtoo/elpa-mirror")
