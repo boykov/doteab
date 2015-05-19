@@ -7,6 +7,8 @@
 ;; Requirements: 
 ;; Status: not intended to be distributed yet
 
+(load "/home/eab/git/dotemacs/eab-path.el")
+
 ;; Load bootstrap.el
 (load (concat user-emacs-directory "bootstrap.el"))
 
@@ -30,12 +32,6 @@
 ;; TODO org-babel-safe-header-args
 ;; похоже, что при прогоне bootstrap сначала загружается из el-get/org (вместо el-get/org-mode)
 
-(defun eab/ondaemon (def)
-  (if (string= eab/daemon-name def) 't))
-
-(setq eab/daemon-name (daemonp))
-
-;; (dotemacs-load-children '("/home/eab/.emacs.d/eab-path-minimal"))
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-workgroups2"))
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-ui-minimal"))
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-shell"))
@@ -96,18 +92,16 @@
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-packages"))
 
-;; ;; TODO manual comment problem packages
-;; (el-get 'sync (append
-;; 	       eab/package-sources-extra
-;; 	       ))
+;; TODO manual comment problem packages
+(el-get 'sync (append
+	       eab/package-sources-extra
+	       ))
 
-;; (el-get 'sync (append
-;; 	       eab/el-get-sources-extra
-;; 	       ))
+(el-get 'sync (append
+	       eab/el-get-sources-extra
+	       ))
 
-;; ;; TODO void eab/onhost
-;; ;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-path"))
-;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-depend"))
-;; (dotemacs-load-children '("/home/eab/git/dotemacs/lisp/eab-gnus"))
-;; (dotemacs-load-children '("/home/eab/git/dotemacs/lisp/eab-twit"))
-;; ;; (dotemacs-load-children '("/home/eab/git/dotemacs/eab-postload"))
+(dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-depend"))
+(dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-gnus"))
+(dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-twit"))
+(dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-postload"))
