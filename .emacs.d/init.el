@@ -1,6 +1,6 @@
 ;;; init.el --- 
 
-;; Copyright (C) 2010, 2011, 2012, 2013, 2014, 2015 Evgeny Boykov
+;; Copyright (C) 2010-2015 Evgeny Boykov
 ;;
 ;; Author: artscan@list.ru
 ;; Keywords: init, dotemacs
@@ -20,12 +20,11 @@
 (package-refresh-contents)
 (package-initialize)
 
-;; (eab/sync-package '(ace-window))
+(el-get 'sync (append
+	       eab/package-sources-minimal
 
-;; (if (featurep 'ace-jump-mode)
-;;     (unload-feature 'ace-jump-mode 't))
-
-(dotemacs-load-children '("packages"))
+	       eab/el-get-sources-minimal
+	       ))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-kbd"))
 
