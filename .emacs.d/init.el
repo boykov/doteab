@@ -8,7 +8,7 @@
 ;; Status: not intended to be distributed yet
 
 ;; Load bootstrap.el
-(load (concat user-emacs-directory "lisp/bootstrap.el"))
+(load (concat user-emacs-directory "bootstrap.el"))
 
 ;; Load dotemacs.el
 (load (concat user-emacs-directory "el-get/eab-misc/dotemacs.el"))
@@ -23,7 +23,7 @@
 ;; (if (featurep 'ace-jump-mode)
 ;;     (unload-feature 'ace-jump-mode 't))
 
-(dotemacs-load-children '("lisp/packages"))
+(dotemacs-load-children '("packages"))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-kbd"))
 
