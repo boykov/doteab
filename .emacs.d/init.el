@@ -84,9 +84,6 @@
 
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-ace"))
 
-(setq eab/eeansi-path "/home/eab/git/auto/eeansi.sh")
-(setq eab/eegchannel-path (expand-file-name (concat user-emacs-directory "el-get/eev-current/eegchannel")))
-
 (dotemacs-load-children '("el-get/eab-dotemacs/lisp/eab-eepitch"))
 
 (dotemacs-load-children '("el-get/eab-dotemacs/eab-packages"))
