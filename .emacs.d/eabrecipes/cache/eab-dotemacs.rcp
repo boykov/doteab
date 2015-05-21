@@ -1,4 +1,0 @@
-(:name eab-dotemacs
-       :description "My emacs config"
-       :type git
-       :url "../../cache/el-getmirror/eab-dotemacs")
