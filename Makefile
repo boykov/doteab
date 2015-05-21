@@ -12,7 +12,7 @@ all:
 
 gnome:
 	env HOME=`pwd` `which emacs` --daemon=ghost
-	gnome-terminal . --command "env HOME=`pwd` emacsclient -t -s ghost"
+	gnome-terminal . --command "env TERM=xterm-256color HOME=`pwd` emacsclient -t -s ghost"
 
 clear:
 	cd .emacs.d && rm -rf el-get/
