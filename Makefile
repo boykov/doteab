@@ -15,7 +15,7 @@ gnome:
 	gnome-terminal . --command "env TERM=xterm-256color HOME=`pwd` emacsclient -t -s ghost"
 
 tmux:
-	env HOME=`pwd` /home/eab/data/gitno/emacs24.4/emacs-24.4/src/emacs-24.4.1 --daemon=ghost
+	env HOME=`pwd` /home/eab/data/gitno/emacs24.4/emacs-24.5/src/emacs-24.5.1 --daemon=ghost
 	tmux new-window 'env TERM=xterm-256color HOME=`pwd` emacsclient -t -s ghost'
 
 clear:
