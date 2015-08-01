@@ -6,7 +6,7 @@ cache:
 	cd cache && ln -s /home/eab/newemacs/elpamirror
 
 all:
-	env HOME=`pwd` `which emacs` --daemon=ghost
+	env HOME=`pwd` /home/eab/data/gitno/emacs24.4/emacs-24.5/src/emacs-24.5.1 --daemon=ghost
 	env TERM=eterm-color HOME=`pwd` emacsclient -s ghost --eval "(eab/loaded-ok)"
 	@if (test -e ./dotemacs.error); then rm ./dotemacs.error; echo "ERROR! dotemacs did not loaded correctly"; return 1; else echo "dotemacs loaded ok"; fi
 
