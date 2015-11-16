@@ -137,7 +137,14 @@ before layers configuration."
   ;; User initialization goes here
   )
 
-(defun dotspacemacs/config ()
+
+(defun dotspacemacs/user-init ()
+  "Initialization function for user code.
+It is called immediately after `dotspacemacs/init'.  You are free to put any
+user code."
+  )
+
+(defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
@@ -146,6 +153,7 @@ layers configuration."
   (setq spacemacs-pre-extensions nil)
   (setq spacemacs-post-extensions nil)
 
+  (eab-spacemacs/init-eab-dotemacs/lisp-1)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
