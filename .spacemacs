@@ -148,11 +148,6 @@ user code."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-  (setq powerline-default-separator nil)
-  (setq spacemacs-packages nil)
-  (setq spacemacs-pre-extensions nil)
-  (setq spacemacs-post-extensions nil)
-
   (eab-spacemacs/init-eab-dotemacs/lisp-1)
 )
 
