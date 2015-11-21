@@ -1,0 +1,92 @@
+#+TITLE: Администрирование chronos  {{{csumfile}}}
+#+OPTIONS: toc:nil
+#+FILETAGS: :w2c:
+#+SETUPFILE: level-0.org
+
+chronos:
+#+begin_src sh
+sudo apt-get install ssh
+#+end_src
+
+Disk Guest Additions
+http://help.ubuntu.ru/wiki/virtualbox
+
+VirtualBox: NAT Port Forwarding 2222
+https://forums.virtualbox.org/viewtopic.php?f=8&t=55766
+
+remote:
+#+begin_src sh
+ssh -p 2222 eab@127.0.0.1
+sudo wget -qO- https://get.docker.com/ | sh
+
+sudo docker run hello-world
+sudo docker images
+man docker images
+sudo docker images --tree # deprecated
+sudo docker ps -a
+sudo docker rename nostalgic_bohr ubuntu_nano
+
+sudo docker logs daemon_dave
+sudo docker top daemon_dave
+sudo docker stop daemon_dave
+
+sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' daemon_dave
+sudo docker inspect --format '{{ .State.Running }}' daemon_dave
+
+
+sudo docker pull nicferrier/emacsd
+sudo docker run -it nicferrier/emacsd bash
+
+sudo docker history nicferrier/emacsd
+sudo docker history 511136ea3c5a
+sudo docker stop 202c27bf267e
+sudo docker -D info
+
+sudo docker run -p 8080:8080 -p 8081:8081 -p 8022:22 -ti jenkinsci/workflow-demo
+
+sudo du -sh /var/lib/docker
+
+sudo docker save -o hw hello-world
+sudo docker run -p 5000:5000 registry
+docker ps -a | grep regi
+
+sudo docker logout
+sudo docker login localhost:5000
+sudo docker tag hello-world boykov/hello-world
+sudo docker push boykov/hello-world
+sudo docker tag hello-world localhost:5000/boykov/hello-world
+sudo docker push localhost:5000/boykov/hello-world
+sudo docker search localhost:5000/boykov/hello
+sudo docker search boykov/hello
+sudo docker logout localhost:5000
+sudo docker login
+
+curl -X GET http://localhost:5000/v1/search?q=*
+#+end_src
+
+see https://github.com/nicferrier/emacs-in-a-docker/blob/master/Dockerfile
+
+sudo usermod -aG docker eab
+
+
+#+begin_src sh
+sudo docker run --name postgresql -d postgres
+sudo docker run --link postgresql:db jchaney/owncloud
+sudo docker stop postgresql
+
+sudo docker rm l3iggs-oc
+sudo docker stop l3iggs-oc
+sudo docker start l3iggs-oc
+sudo docker run --name l3iggs-oc -p 8080:80 -p 443:443 -d l3iggs/owncloud
+
+#+end_src
+
+#+begin_src sh
+docker run --name bob_the_container -i -t ubuntu /bin/bash
+docker attach bob_the_container
+sudo docker run --name daemon_dave -d ubuntu /bin/sh -c "while true; do echo hello world; sleep 1; done"
+docker ps 
+docker images
+sudo docker run -it ubuntu env
+
+#+end_src
